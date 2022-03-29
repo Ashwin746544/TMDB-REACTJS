@@ -1,0 +1,17 @@
+.navigation__wrapper {
+  background-color: #032541;
+  .navbar {
+    color: white;
+    .nav-link {
+      color: white !important;
+    }
+    .language-link {
+      border: 1px solid white;
+      padding: 3px;
+    }
+    .language-link:hover {
+      background-color: white;
+      color: #032541;
+    }
+  }
+}

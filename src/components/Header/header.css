@@ -1,0 +1,33 @@
+header {
+  background-image: -webkit-gradient(linear, left top, right top, from(#024869), to(transparent)), url("../../assets/header_bg.jpg");
+  background-image: linear-gradient(to right, #024869, transparent), url("../../assets/header_bg.jpg");
+  background-position: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: white;
+}
+
+header .input-container {
+  border-radius: 30px;
+  padding: 10px;
+  position: relative;
+  background: white;
+}
+
+header .input-container input {
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+header .input-container .search-container {
+  background: -webkit-gradient(linear, left top, right top, from(#1ed5a9), to(#01b4e4));
+  background: linear-gradient(to right, #1ed5a9 0%, #01b4e4 100%);
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 11px 20px;
+  color: white;
+  border-radius: 30px;
+}
+/*# sourceMappingURL=header.css.map */

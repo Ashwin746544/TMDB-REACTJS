@@ -1,0 +1,21 @@
+@import "../variable.scss";
+.filter-top {
+  .categories-container {
+    border: 1px solid $primaryColor;
+    border-radius: 30px;
+    position: relative;
+    .category-container {
+      padding: 5px 17px;
+      color: white;
+      cursor: pointer;
+    }
+    .category-overlay {
+      position: absolute;
+      background-color: $primaryColor;
+      border-radius: 30px;
+      // width: 80px;
+      z-index: -1;
+      height: 100%;
+    }
+  }
+}

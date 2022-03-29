@@ -1,0 +1,22 @@
+.navigation__wrapper {
+  background-color: #032541;
+}
+
+.navigation__wrapper .navbar {
+  color: white;
+}
+
+.navigation__wrapper .navbar .nav-link {
+  color: white !important;
+}
+
+.navigation__wrapper .navbar .language-link {
+  border: 1px solid white;
+  padding: 3px;
+}
+
+.navigation__wrapper .navbar .language-link:hover {
+  background-color: white;
+  color: #032541;
+}
+/*# sourceMappingURL=navigation.css.map */

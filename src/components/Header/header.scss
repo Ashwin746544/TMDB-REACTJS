@@ -1,0 +1,27 @@
+header {
+  background-image: linear-gradient(to right, #024869, transparent), url("../../assets/header_bg.jpg");
+  background-position: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: white;
+  .input-container {
+    border-radius: 30px;
+    padding: 10px;
+    position: relative;
+    background: white;
+    input {
+      width: 100%;
+      border: none;
+      outline: none;
+    }
+    .search-container {
+      background: linear-gradient(to right, rgba(30, 213, 169, 1) 0%, rgba(1, 180, 228, 1) 100%);
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 11px 20px;
+      color: white;
+      border-radius: 30px;
+    }
+  }
+}
