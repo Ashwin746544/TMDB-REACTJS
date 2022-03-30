@@ -1,0 +1,31 @@
+.trailerCard .trailerCard__img-container {
+  cursor: pointer;
+  position: relative;
+  height: 150px;
+  border-radius: 10px;
+}
+
+.trailerCard .trailerCard__img-container .trailerCard__img {
+  height: 100%;
+  border-radius: 10px;
+}
+
+.trailerCard .trailer__info-container {
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+.trailerCard .trailer__info-container p {
+  margin: 0;
+}
+
+.trailerCard .trailer__info-container p.trailer__name {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.trailerCard .trailer__info-container p.trailer__name:hover {
+  color: #0178e4;
+}
+/*# sourceMappingURL=TrailerCard.css.map */

@@ -6,16 +6,40 @@
     position: relative;
     .category-container {
       padding: 5px 17px;
-      color: white;
+      color: $primaryColor;
       cursor: pointer;
+      font-weight: 500;
+    }
+    .selected {
+      background: linear-gradient(to right, #c0fecf 0%, #1ed5a9 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     .category-overlay {
       position: absolute;
       background-color: $primaryColor;
+      transition: transform 200ms ease-out;
       border-radius: 30px;
       // width: 80px;
       z-index: -1;
       height: 100%;
+    }
+  }
+}
+
+.for_trailer {
+  margin-top: 30px !important;
+  h4 {
+    color: white;
+  }
+  .categories-container {
+    border: 1px solid #1ed5a9;
+    .selected {
+      background: none;
+      color: $primaryColor;
+    }
+    .category-overlay {
+      background-color: #1ed5a9;
     }
   }
 }

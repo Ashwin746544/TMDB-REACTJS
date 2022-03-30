@@ -6,15 +6,48 @@
 
 .filter-top .categories-container .category-container {
   padding: 5px 17px;
-  color: white;
+  color: #032b48;
   cursor: pointer;
+  font-weight: 500;
+}
+
+.filter-top .categories-container .selected {
+  background: -webkit-gradient(linear, left top, right top, from(#c0fecf), to(#1ed5a9));
+  background: linear-gradient(to right, #c0fecf 0%, #1ed5a9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .filter-top .categories-container .category-overlay {
   position: absolute;
   background-color: #032b48;
+  -webkit-transition: -webkit-transform 200ms ease-out;
+  transition: -webkit-transform 200ms ease-out;
+  transition: transform 200ms ease-out;
+  transition: transform 200ms ease-out, -webkit-transform 200ms ease-out;
   border-radius: 30px;
   z-index: -1;
   height: 100%;
+}
+
+.for_trailer {
+  margin-top: 30px !important;
+}
+
+.for_trailer h4 {
+  color: white;
+}
+
+.for_trailer .categories-container {
+  border: 1px solid #1ed5a9;
+}
+
+.for_trailer .categories-container .selected {
+  background: none;
+  color: #032b48;
+}
+
+.for_trailer .categories-container .category-overlay {
+  background-color: #1ed5a9;
 }
 /*# sourceMappingURL=FilterTop.css.map */

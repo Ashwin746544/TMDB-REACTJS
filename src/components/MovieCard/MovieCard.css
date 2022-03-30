@@ -1,0 +1,40 @@
+.movieCard .movieCard__img-container {
+  position: relative;
+  height: 250px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.movieCard .movieCard__img-container .movieCard__img {
+  height: 100%;
+  border-radius: 10px;
+}
+
+.movieCard .movieCard__img-container .progressBar__wrapper {
+  position: absolute;
+  left: 12px;
+  bottom: -22px;
+}
+
+.movieCard .movie__info-container {
+  padding: 10px;
+}
+
+.movieCard .movie__info-container p {
+  margin: 0;
+}
+
+.movieCard .movie__info-container p.movie__name {
+  color: black;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.movieCard .movie__info-container p.movie__name:hover {
+  color: #0178e4;
+}
+
+.movieCard .movie__info-container p.movie__date {
+  color: gray;
+}
+/*# sourceMappingURL=MovieCard.css.map */

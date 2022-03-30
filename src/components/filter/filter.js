@@ -1,12 +1,13 @@
+import FilterBottom from '../FilterBottom/FilterBottom';
 import FilterTop from '../FilterTop/FilterTop';
 import './filter.css';
 
-const Filter = () => {
-  const categories = ["Streaming", "On TV", "For Rent", "In Theaters"];
+const Filter = ({ categories, cType, title, isMovieCard }) => {
   return (
-    <div className='container filter mt-3'>
+    <div className={`container filter mt-5 ${!isMovieCard ? "trailer_bg" : ""}`}>
       <div className='row'>
-        <FilterTop title="What's Popular" categories={categories} />
+        <FilterTop cType={cType} title={title} categories={categories} isMovieCard={isMovieCard} />
+        <FilterBottom isMovieCard={isMovieCard} />
       </div>
     </div>
   );

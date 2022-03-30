@@ -1,0 +1,27 @@
+.trailerCard {
+  .trailerCard__img-container {
+    cursor: pointer;
+    position: relative;
+    height: 150px;
+    border-radius: 10px;
+    .trailerCard__img {
+      height: 100%;
+      border-radius: 10px;
+    }
+  }
+  .trailer__info-container {
+    padding: 10px;
+    text-align: center;
+    color: white;
+    p {
+      margin: 0;
+    }
+    p.trailer__name {
+      font-weight: 700;
+      cursor: pointer;
+    }
+    p.trailer__name:hover {
+      color: rgba(1, 120, 228, 1);
+    }
+  }
+}

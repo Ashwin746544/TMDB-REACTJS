@@ -1,0 +1,12 @@
+.progressBar__Container {
+  width: 45px;
+  .progressBar__Children {
+    font-size: 15px;
+    color: white;
+    font-weight: 700;
+    small {
+      font-size: 10px;
+      vertical-align: top;
+    }
+  }
+}

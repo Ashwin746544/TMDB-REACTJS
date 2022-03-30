@@ -1,1 +1,5 @@
-/* No CSS *//*# sourceMappingURL=filter.css.map */
+.trailer_bg {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(3, 37, 65, 0.75)), to(rgba(3, 37, 65, 0.75))), url("../../assets/trailer_filter-background.jpg");
+  background-image: linear-gradient(to right, rgba(3, 37, 65, 0.75) 0%, rgba(3, 37, 65, 0.75) 100%), url("../../assets/trailer_filter-background.jpg");
+}
+/*# sourceMappingURL=filter.css.map */

@@ -1,0 +1,34 @@
+.movieCard {
+  .movieCard__img-container {
+    position: relative;
+    height: 250px;
+    border-radius: 10px;
+    cursor: pointer;
+    .movieCard__img {
+      height: 100%;
+      border-radius: 10px;
+    }
+    .progressBar__wrapper {
+      position: absolute;
+      left: 12px;
+      bottom: -22px;
+    }
+  }
+  .movie__info-container {
+    padding: 10px;
+    p {
+      margin: 0;
+    }
+    p.movie__name {
+      color: black;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    p.movie__name:hover {
+      color: rgba(1, 120, 228, 1);
+    }
+    p.movie__date {
+      color: gray;
+    }
+  }
+}
