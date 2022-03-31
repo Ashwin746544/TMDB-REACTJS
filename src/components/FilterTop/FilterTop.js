@@ -1,10 +1,9 @@
-import { type } from "@testing-library/user-event/dist/type";
 import { useEffect, useState } from "react";
 import MovieCard from "../MovieCard/MovieCard";
 import "./FilterTop.css";
+const apiKey = "822b48fc66443abd51e7c47769a96310";
 
-
-const FilterTop = ({ title, categories, cType, isMovieCard }) => {
+const FilterTop = ({ title, categories, cType, isMovieCard, storeCardDataHandler }) => {
   console.log(cType);
 
   const [currentCategory, setCurrentCategory] = useState(0);
@@ -13,24 +12,89 @@ const FilterTop = ({ title, categories, cType, isMovieCard }) => {
   const [transformValue, setTransformValue] = useState(0);
 
   useEffect(() => {
+    let value = transformValue;
     if (currentCategory > previousCategory) {
-      let value = transformValue;
       for (let i = previousCategory; i < currentCategory; i++) {
         value += document.querySelector(`.${cType} [data-cat-id = "${i}"]`).getBoundingClientRect().width;
       }
-      setTransformValue(value);
-      setPreviousCategory(currentCategory);
-    } else if (currentCategory < previousCategory) {
-      console.log("smaller");
-      let value = transformValue;
+    }
+    if (currentCategory < previousCategory) {
       for (let i = previousCategory - 1; i >= currentCategory; i--) {
         value -= document.querySelector(`.${cType} [data-cat-id = "${i}"]`).getBoundingClientRect().width;
       }
-      setTransformValue(value);
-      setPreviousCategory(currentCategory);
-    } else {
-      setTransformValue(0);
     }
+    let url = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`;
+    switch (cType) {
+      case "popular":
+        switch (categories[currentCategory]) {
+          case "Streaming":
+            break;
+          case "On TV":
+            url = `https://api.themoviedb.org/3/tv/popular?api_key=${apiKey}&language=en-US&page=1`;
+            break;
+          case "For Rent":
+            break;
+          case "In Theaters":
+            url = `https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}&language=en-US&page=1`;
+            break;
+          default:
+            break;
+        }
+        break;
+      case "trending":
+        switch (categories[currentCategory]) {
+          case "Today":
+            url = `https://api.themoviedb.org/3/trending/movie/day?api_key=${apiKey}`;
+            break;
+          case "This Week":
+            url = `https://api.themoviedb.org/3/trending/movie/week?api_key=${apiKey}`;
+            break;
+          default:
+            break;
+        }
+        break;
+      case "free":
+        switch (categories[currentCategory]) {
+          case "Movie":
+            url = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`;
+            break;
+          case "TV":
+            url = `https://api.themoviedb.org/3/tv/popular?api_key=${apiKey}&language=en-US&page=1`;
+            break;
+          default:
+            break;
+        }
+        break;
+      case "trailers":
+        switch (categories[currentCategory]) {
+          case "Streaming":
+            //do nothing default url
+            break;
+          case "On TV":
+            url = `https://api.themoviedb.org/3/tv/popular?api_key=${apiKey}&language=en-US&page=1`;
+            break;
+          case "For Rent":
+            break;
+          case "In Theaters":
+            url = `https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}&language=en-US&page=1`;
+            break;
+          default:
+            break;
+        }
+        break;
+      default:
+        break;
+    }
+    fetch(url).then(
+      response => response.json()
+    ).then(response => {
+      console.log(response);
+      storeCardDataHandler(response.results);
+    }
+    );
+
+    setTransformValue(value);
+    setPreviousCategory(currentCategory);
     setOverlayWidth(document.querySelector(`.${cType} [data-cat-id = "${currentCategory}"]`).getBoundingClientRect().width);
   }, [currentCategory]);
 
@@ -44,7 +108,14 @@ const FilterTop = ({ title, categories, cType, isMovieCard }) => {
 
   const categoryElements = categories.map(
     (category, index) => {
-      return <div key={category} onClick={categorySelectHandler} className={`category-container ${currentCategory == index ? "selected" : ""}`} style={{ color: !isMovieCard && "white" }} data-cat-id={index}>{category}</div>
+      return <div
+        key={category}
+        onClick={categorySelectHandler}
+        className={`category-container ${currentCategory == index ? "selected" : ""}`}
+        style={{ color: !isMovieCard && "white" }}
+        data-cat-id={index}>
+        {category}
+      </div>
     }
   );
   return (

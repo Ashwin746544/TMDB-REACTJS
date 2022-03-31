@@ -1,3 +1,7 @@
+.movieCard {
+  max-width: 166px;
+}
+
 .movieCard .movieCard__img-container {
   position: relative;
   height: 250px;

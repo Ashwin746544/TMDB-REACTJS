@@ -1,6 +1,7 @@
 import Navigation from '../navigation/navigation';
 import Header from '../Header/header';
 import Filter from '../filter/filter';
+import Footer from '../Footer/Footer';
 
 const HomePage = () => {
   const popularCategories = ["Streaming", "On TV", "For Rent", "In Theaters"];
@@ -14,6 +15,7 @@ const HomePage = () => {
     <Filter cType="free" title="Free To Watch" categories={freeCategories} isMovieCard={true} />
     <Filter cType="trailers" title="Latest Trailers" categories={trailersCategories} isMovieCard={false} />
     <Filter cType="trending" title="Trending" categories={trendingCategories} isMovieCard={true} />
+    <Footer />
   </>);
 }
 

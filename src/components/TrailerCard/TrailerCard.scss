@@ -1,13 +1,32 @@
 .trailerCard {
+  width: 250px;
+  max-width: 250px;
   .trailerCard__img-container {
     cursor: pointer;
     position: relative;
     height: 150px;
+    width: 100%;
     border-radius: 10px;
+    transition: all 100ms linear;
     .trailerCard__img {
       height: 100%;
       border-radius: 10px;
+      width: 100%;
+      object-fit: cover;
     }
+    .playIcon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 65px;
+    }
+  }
+  .trailerCard__img-container:hover {
+    transform: scale(1.05, 1.05);
+  }
+  .trailerCard__img-container:hover .playIcon {
+    width: 70px;
   }
   .trailer__info-container {
     padding: 10px;

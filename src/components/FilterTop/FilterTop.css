@@ -11,6 +11,10 @@
   font-weight: 500;
 }
 
+.filter-top .categories-container .category-container p {
+  margin: 0 !important;
+}
+
 .filter-top .categories-container .selected {
   background: -webkit-gradient(linear, left top, right top, from(#c0fecf), to(#1ed5a9));
   background: linear-gradient(to right, #c0fecf 0%, #1ed5a9 100%);
@@ -43,11 +47,14 @@
 }
 
 .for_trailer .categories-container .selected {
+  color: #032b48 !important;
   background: none;
-  color: #032b48;
+  -webkit-background-clip: inherit;
+  -webkit-text-fill-color: inherit;
 }
 
 .for_trailer .categories-container .category-overlay {
-  background-color: #1ed5a9;
+  background: -webkit-gradient(linear, left top, right top, from(#c0fecf), to(#1ed5a9));
+  background: linear-gradient(to right, #c0fecf 0%, #1ed5a9 100%);
 }
 /*# sourceMappingURL=FilterTop.css.map */

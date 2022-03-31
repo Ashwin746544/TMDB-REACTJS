@@ -9,6 +9,9 @@
       color: $primaryColor;
       cursor: pointer;
       font-weight: 500;
+      p {
+        margin: 0 !important;
+      }
     }
     .selected {
       background: linear-gradient(to right, #c0fecf 0%, #1ed5a9 100%);
@@ -35,11 +38,13 @@
   .categories-container {
     border: 1px solid #1ed5a9;
     .selected {
+      color: $primaryColor !important;
       background: none;
-      color: $primaryColor;
+      -webkit-background-clip: inherit;
+      -webkit-text-fill-color: inherit;
     }
     .category-overlay {
-      background-color: #1ed5a9;
+      background: linear-gradient(to right, rgba(192, 254, 207, 1) 0%, rgba(30, 213, 169, 1) 100%);
     }
   }
 }
