@@ -1,5 +1,4 @@
 import DotIcon from "../DotButton/DotIcon";
-import TrailerImg from '../../assets/trailer.jpg';
 import PlayIcon from '../../assets/play.svg';
 import './TrailerCard.css';
 import TrailerModal from "../TrailerModal/TrailerModal";

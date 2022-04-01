@@ -1,8 +1,35 @@
+.animateCardWhenLoaded {
+  -webkit-animation: fadeInCard 500ms ease-in;
+          animation: fadeInCard 500ms ease-in;
+}
+
+@-webkit-keyframes fadeInCard {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInCard {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .footer {
   color: white;
   background-color: #032b48;
   padding-top: 50px;
   padding-bottom: 70px;
+}
+
+.footer .row {
+  grid-row-gap: 30px;
 }
 
 .footer h5,
@@ -23,5 +50,9 @@
   font-size: 18px;
   border-radius: 7px;
   cursor: pointer;
+}
+
+.footer .grid-gap-row {
+  grid-row-gap: 30px;
 }
 /*# sourceMappingURL=Footer.css.map */
