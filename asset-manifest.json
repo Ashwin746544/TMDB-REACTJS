@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/TMDB-REACTJS/static/css/main.c5719c19.css",
-    "main.js": "/TMDB-REACTJS/static/js/main.f3d81c9a.js",
+    "main.js": "/TMDB-REACTJS/static/js/main.ccbfbfd1.js",
     "static/js/787.6a281649.chunk.js": "/TMDB-REACTJS/static/js/787.6a281649.chunk.js",
     "static/media/trailer_filter-background.jpg": "/TMDB-REACTJS/static/media/trailer_filter-background.ec71ecb9d8a4e29c8108.jpg",
     "static/media/header_bg.jpg": "/TMDB-REACTJS/static/media/header_bg.15000e3bf89ee840f304.jpg",
@@ -17,11 +17,11 @@
     "static/media/plus.svg": "/TMDB-REACTJS/static/media/plus.704c0b92e3bbfac62f1e82140e039c79.svg",
     "static/media/hamburger.svg": "/TMDB-REACTJS/static/media/hamburger.09b80701cad7e1aa60cc.svg",
     "main.c5719c19.css.map": "/TMDB-REACTJS/static/css/main.c5719c19.css.map",
-    "main.f3d81c9a.js.map": "/TMDB-REACTJS/static/js/main.f3d81c9a.js.map",
+    "main.ccbfbfd1.js.map": "/TMDB-REACTJS/static/js/main.ccbfbfd1.js.map",
     "787.6a281649.chunk.js.map": "/TMDB-REACTJS/static/js/787.6a281649.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c5719c19.css",
-    "static/js/main.f3d81c9a.js"
+    "static/js/main.ccbfbfd1.js"
   ]
 }
