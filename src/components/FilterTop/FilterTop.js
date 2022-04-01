@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import MovieCard from "../MovieCard/MovieCard";
 import "./FilterTop.css";
 const apiKey = "822b48fc66443abd51e7c47769a96310";
 
@@ -118,7 +117,7 @@ const FilterTop = ({ title, categories, cType, isMovieCard, storeCardDataHandler
       return <div
         key={category}
         onClick={categorySelectHandler}
-        className={`category-container ${currentCategory == index ? "selected" : ""}`}
+        className={`category-container ${+currentCategory === +index ? "selected" : ""}`}
         style={{ color: !isMovieCard && "white" }}
         data-cat-id={index}>
         {category}
@@ -126,10 +125,10 @@ const FilterTop = ({ title, categories, cType, isMovieCard, storeCardDataHandler
     }
   );
   return (
-    <div className={`col-12 px-5 d-flex filter-top ${!isMovieCard ? "for_trailer" : ""}`}>
+    <div className={`col-12 px-lg-5 d-flex filter-top ${!isMovieCard ? "for_trailer" : ""}`}>
       <div className="row">
-        <div className='col-lg-auto'><h4 className='h4' >{title}</h4></div>
-        <div className='col-lg-auto'>
+        <div className='col-auto'><h4 className='h4' >{title}</h4></div>
+        <div className='col-auto'>
           <div className={`categories-container d-flex ${cType}`}>
             {categoryElements}
             <div className="category-overlay" style={overlayStyle}></div>

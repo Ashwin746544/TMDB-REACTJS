@@ -4,11 +4,15 @@
     border: 1px solid $primaryColor;
     border-radius: 30px;
     position: relative;
+    max-width: calc(100vw - 24px);
     .category-container {
       padding: 5px 17px;
       color: $primaryColor;
       cursor: pointer;
       font-weight: 500;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
       p {
         margin: 0 !important;
       }

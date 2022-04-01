@@ -28,7 +28,7 @@ const FilterBottom = ({ isMovieCard, cardDataArray, cType }) => {
     content = cardDataArray.map((cardData, index) => <TrailerCard key={index} cardData={cardData} getFormattedDate={getFormattedDate} />);
   }
   return (
-    <div className="col-12 ps-5 mt-3 filter-bottom" onScroll={scrollHandler}>
+    <div className="col-12 ps-lg-5 mt-3 filter-bottom" onScroll={scrollHandler}>
       <div className="row flex-nowrap movieCards__container" style={isMovieCard ? { minHeight: "398px" } : {}}>
         {content}
       </div>

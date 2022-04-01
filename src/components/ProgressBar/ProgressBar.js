@@ -9,7 +9,9 @@ const ProgressBar = ({ persentage }) => {
   }
   return (
     <div className="progressBar__Container">
-      <CircularProgressbarWithChildren background value={persentage} styles={buildStyles({ pathColor: pColor, trailColor: "rgb(28 97 147)", backgroundColor: '#032b48' })} >
+      <CircularProgressbarWithChildren
+        background value={persentage}
+        styles={buildStyles({ pathColor: pColor, trailColor: "rgb(28 97 147)", backgroundColor: '#032b48' })} >
         <span className='progressBar__Children'>{persentage}<small>%</small></span>
       </CircularProgressbarWithChildren>
     </div>
