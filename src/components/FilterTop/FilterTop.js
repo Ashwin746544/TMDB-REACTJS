@@ -101,9 +101,8 @@ const FilterTop = ({ title, categories, cType, isMovieCard, storeCardDataHandler
 
     setTransformValue(value);
     setPreviousCategory(currentCategory);
-    // setOverlayWidth(document.querySelector(`.${cType} [data-cat-id = "${currentCategory}"]`).getBoundingClientRect().width);
-    setOverlayWidth(document.querySelector(`.${cType} [data-cat-id = "${currentCategory}"]`).offsetWidth);
-    console.log("width: ", document.querySelector(`.${cType} [data-cat-id = "${currentCategory}"]`).offsetWidth);
+    setOverlayWidth(document.querySelector(`.${cType} [data-cat-id = "${currentCategory}"]`).getBoundingClientRect().width);
+    console.log("width: ", document.querySelector(`.${cType} [data-cat-id = "${currentCategory}"]`).getBoundingClientRect().width);
   }, [currentCategory]);
 
 
@@ -112,7 +111,7 @@ const FilterTop = ({ title, categories, cType, isMovieCard, storeCardDataHandler
   }
 
 
-  const overlayStyle = { width: `${overlayWidth}px`, transform: `translateX(${transformValue}px)`, maxwidth: "108px" };
+  const overlayStyle = { width: `${overlayWidth}px`, transform: `translateX(${transformValue}px)` };
 
   const categoryElements = categories.map(
     (category, index) => {
