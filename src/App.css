@@ -13,3 +13,7 @@
   background: #dbdbdb;
   border-radius: 25px;
 }
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url("./assets/hamburger.svg") !important;
+}

@@ -3,7 +3,7 @@ import MovieCard from "../MovieCard/MovieCard";
 import "./FilterTop.css";
 const apiKey = "822b48fc66443abd51e7c47769a96310";
 
-const FilterTop = ({ title, categories, cType, isMovieCard, storeCardDataHandler }) => {
+const FilterTop = ({ title, categories, cType, isMovieCard, storeCardDataHandler, showFadedContainerHandler }) => {
   console.log(cType);
 
   const [currentCategory, setCurrentCategory] = useState(0);
@@ -11,18 +11,7 @@ const FilterTop = ({ title, categories, cType, isMovieCard, storeCardDataHandler
   const [overlayWidth, setOverlayWidth] = useState(0);
   const [transformValue, setTransformValue] = useState(0);
 
-  useEffect(() => {
-    let value = transformValue;
-    if (currentCategory > previousCategory) {
-      for (let i = previousCategory; i < currentCategory; i++) {
-        value += document.querySelector(`.${cType} [data-cat-id = "${i}"]`).getBoundingClientRect().width;
-      }
-    }
-    if (currentCategory < previousCategory) {
-      for (let i = previousCategory - 1; i >= currentCategory; i--) {
-        value -= document.querySelector(`.${cType} [data-cat-id = "${i}"]`).getBoundingClientRect().width;
-      }
-    }
+  const getURl = () => {
     let url = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`;
     switch (cType) {
       case "popular":
@@ -85,11 +74,29 @@ const FilterTop = ({ title, categories, cType, isMovieCard, storeCardDataHandler
       default:
         break;
     }
+    return url;
+  }
+
+  useEffect(() => {
+    let value = transformValue;
+    if (currentCategory > previousCategory) {
+      for (let i = previousCategory; i < currentCategory; i++) {
+        value += document.querySelector(`.${cType} [data-cat-id = "${i}"]`).getBoundingClientRect().width;
+      }
+    }
+    if (currentCategory < previousCategory) {
+      for (let i = previousCategory - 1; i >= currentCategory; i--) {
+        value -= document.querySelector(`.${cType} [data-cat-id = "${i}"]`).getBoundingClientRect().width;
+      }
+    }
+    const url = getURl();
+    showFadedContainerHandler(true);
     fetch(url).then(
       response => response.json()
     ).then(response => {
-      console.log(response);
+      // console.log(response);
       storeCardDataHandler(response.results);
+      showFadedContainerHandler(false);
     }
     );
 

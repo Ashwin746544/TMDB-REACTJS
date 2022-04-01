@@ -1,46 +1,51 @@
-.trailerCard {
-  width: 250px;
-  max-width: 250px;
-  .trailerCard__img-container {
-    cursor: pointer;
-    position: relative;
-    height: 150px;
-    width: 100%;
-    border-radius: 10px;
-    transition: all 100ms linear;
-    .trailerCard__img {
-      height: 100%;
-      border-radius: 10px;
-      width: 100%;
-      object-fit: cover;
-    }
-    .playIcon {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 65px;
-    }
-  }
-  .trailerCard__img-container:hover {
-    transform: scale(1.05, 1.05);
-  }
-  .trailerCard__img-container:hover .playIcon {
-    width: 70px;
-  }
-  .trailer__info-container {
-    padding: 10px;
-    text-align: center;
-    color: white;
-    p {
-      margin: 0;
-    }
-    p.trailer__name {
-      font-weight: 700;
+@import "../variable.scss";
+.fixed-minSize {
+  min-height: 294px;
+  .trailerCard {
+    width: 250px;
+    max-width: 250px;
+    @extend .animateCardWhenLoaded;
+    .trailerCard__img-container {
       cursor: pointer;
+      position: relative;
+      height: 150px;
+      width: 100%;
+      border-radius: 10px;
+      transition: all 100ms linear;
+      .trailerCard__img {
+        height: 100%;
+        border-radius: 10px;
+        width: 100%;
+        object-fit: cover;
+      }
+      .playIcon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 65px;
+      }
     }
-    p.trailer__name:hover {
-      color: rgba(1, 120, 228, 1);
+    .trailerCard__img-container:hover {
+      transform: scale(1.05, 1.05);
+    }
+    .trailerCard__img-container:hover .playIcon {
+      width: 70px;
+    }
+    .trailer__info-container {
+      padding: 10px;
+      text-align: center;
+      color: white;
+      p {
+        margin: 0;
+      }
+      p.trailer__name {
+        font-weight: 700;
+        cursor: pointer;
+      }
+      p.trailer__name:hover {
+        color: rgba(1, 120, 228, 1);
+      }
     }
   }
 }

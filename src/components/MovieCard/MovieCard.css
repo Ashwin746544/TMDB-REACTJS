@@ -1,5 +1,29 @@
+.animateCardWhenLoaded, .movieCard {
+  -webkit-animation: fadeInCard 500ms ease-in;
+          animation: fadeInCard 500ms ease-in;
+}
+
+@-webkit-keyframes fadeInCard {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInCard {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .movieCard {
   max-width: 166px;
+  min-height: 342px;
 }
 
 .movieCard .movieCard__img-container {

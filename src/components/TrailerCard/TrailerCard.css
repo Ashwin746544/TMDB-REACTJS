@@ -1,9 +1,36 @@
-.trailerCard {
+.animateCardWhenLoaded, .fixed-minSize .trailerCard {
+  -webkit-animation: fadeInCard 500ms ease-in;
+          animation: fadeInCard 500ms ease-in;
+}
+
+@-webkit-keyframes fadeInCard {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInCard {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fixed-minSize {
+  min-height: 294px;
+}
+
+.fixed-minSize .trailerCard {
   width: 250px;
   max-width: 250px;
 }
 
-.trailerCard .trailerCard__img-container {
+.fixed-minSize .trailerCard .trailerCard__img-container {
   cursor: pointer;
   position: relative;
   height: 150px;
@@ -13,7 +40,7 @@
   transition: all 100ms linear;
 }
 
-.trailerCard .trailerCard__img-container .trailerCard__img {
+.fixed-minSize .trailerCard .trailerCard__img-container .trailerCard__img {
   height: 100%;
   border-radius: 10px;
   width: 100%;
@@ -21,7 +48,7 @@
      object-fit: cover;
 }
 
-.trailerCard .trailerCard__img-container .playIcon {
+.fixed-minSize .trailerCard .trailerCard__img-container .playIcon {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -30,31 +57,31 @@
   width: 65px;
 }
 
-.trailerCard .trailerCard__img-container:hover {
+.fixed-minSize .trailerCard .trailerCard__img-container:hover {
   -webkit-transform: scale(1.05, 1.05);
           transform: scale(1.05, 1.05);
 }
 
-.trailerCard .trailerCard__img-container:hover .playIcon {
+.fixed-minSize .trailerCard .trailerCard__img-container:hover .playIcon {
   width: 70px;
 }
 
-.trailerCard .trailer__info-container {
+.fixed-minSize .trailerCard .trailer__info-container {
   padding: 10px;
   text-align: center;
   color: white;
 }
 
-.trailerCard .trailer__info-container p {
+.fixed-minSize .trailerCard .trailer__info-container p {
   margin: 0;
 }
 
-.trailerCard .trailer__info-container p.trailer__name {
+.fixed-minSize .trailerCard .trailer__info-container p.trailer__name {
   font-weight: 700;
   cursor: pointer;
 }
 
-.trailerCard .trailer__info-container p.trailer__name:hover {
+.fixed-minSize .trailerCard .trailer__info-container p.trailer__name:hover {
   color: #0178e4;
 }
 /*# sourceMappingURL=TrailerCard.css.map */

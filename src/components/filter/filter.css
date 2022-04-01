@@ -29,4 +29,35 @@
   background-repeat: no-repeat;
   background-position-y: bottom;
 }
+
+.filter-bottom__wrapper {
+  position: relative;
+  padding: 0 !important;
+}
+
+.filter-bottom__wrapper::after {
+  content: "";
+  width: 80px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(#fff));
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #fff 100%);
+  will-change: opacity;
+  pointer-events: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: 1;
+}
+
+.filter-bottom__wrapper-gt30::after {
+  opacity: 0;
+}
+
+.fadedContainer {
+  -webkit-transition: opacity 200ms linear;
+  transition: opacity 200ms linear;
+  background-color: white;
+}
 /*# sourceMappingURL=filter.css.map */

@@ -1,5 +1,10 @@
+@import "../variable.scss";
+
 .movieCard {
   max-width: 166px;
+  min-height: 342px;
+  @extend .animateCardWhenLoaded;
+
   .movieCard__img-container {
     position: relative;
     height: 250px;

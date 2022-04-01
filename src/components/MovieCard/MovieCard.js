@@ -4,13 +4,9 @@ import dotImg from '../../assets/dot.svg';
 import ProgressBar from "../ProgressBar/ProgressBar";
 import DotIcon from "../DotButton/DotIcon";
 
-const MovieCard = ({ cardData: movieData, totalPopularity }) => {
+const MovieCard = ({ cardData: movieData, getFormattedDate }) => {
   const persentage = movieData.vote_average * 10;
 
-  const getFormattedDate = (date) => {
-    const newDate = new Date(date).toLocaleDateString("default", { month: "short", day: "numeric", year: "numeric" });
-    return newDate;
-  }
   return (
     <div className="col-auto">
       <div className="movieCard">

@@ -14,7 +14,7 @@ const Footer = () => {
               <p>Hi Ashwin Chaudhary!</p>
             </div>
           </div>
-          <div className="col-8 pt-5">
+          <div className="col-8">
             <div className="row gx-5">
               <div className="col-auto">
                 <h5>THE BASICS</h5>
